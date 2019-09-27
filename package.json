@@ -1,0 +1,25 @@
+{
+  "name": "clnm",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".",
+  "scripts": {
+    "build": "tsc ; chmod +x ./build/index.js",
+    "watch": "tsc -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/node": "^12.7.8",
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.3"
+  },
+  "dependencies": {
+    "@types/rimraf": "^2.0.2",
+    "chalk": "^2.4.2",
+    "rimraf": "^3.0.0"
+  }
+}
