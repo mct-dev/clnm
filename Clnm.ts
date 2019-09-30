@@ -1,6 +1,4 @@
-import chalk from "chalk";
 import { Dirent, readdir, stat } from "fs";
-import inquirer from "inquirer";
 import { join } from "path";
 import rimraf from "rimraf";
 import { promisify } from "util";

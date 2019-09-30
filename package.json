@@ -4,8 +4,12 @@
   "description": "",
   "main": ".",
   "scripts": {
-    "build": "tsc ; chmod +x ./build/index.js",
+    "build": "npm run clean && tsc",
+    "chmod": "chmod +x ./build/index.js",
+    "build:mac": "npm run build && npm run chmod",
     "watch": "tsc -w",
+    "clean": "rimraf ./build",
+    "publish": "npm run build && pkg ./build/index.js --out-path ./bin",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -15,13 +19,16 @@
     "@types/chalk": "^2.2.0",
     "@types/inquirer": "^6.5.0",
     "@types/node": "^12.7.8",
+    "@types/ora": "^3.2.0",
+    "@types/rimraf": "^2.0.2",
     "tslint": "^5.20.0",
     "typescript": "^3.6.3"
   },
   "dependencies": {
-    "@types/rimraf": "^2.0.2",
     "chalk": "^2.4.2",
     "inquirer": "^7.0.0",
+    "ora": "^4.0.2",
+    "pkg": "^4.4.0",
     "rimraf": "^3.0.0"
   }
 }
