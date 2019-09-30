@@ -1,3 +1,4 @@
+// tslint:disable:no-console
 import { Dirent, readdir, stat } from "fs";
 import { join } from "path";
 import rimraf from "rimraf";
